@@ -1,0 +1,407 @@
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Cera;
+}
+
+@font-face {
+   font-family: Cera;
+   src: url(../font/Cera\ Pro\ Medium.otf);
+}
+
+body{
+   background-color: rgb(247, 247, 247);
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 90vh;
+   display: none;
+   padding: 50px 100px;
+   position: absolute;
+   background-color: white;
+   /* border: 2px solid saddlebrown; */
+   border-radius: 16px;
+   box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+   /* top: 203vh; */
+   z-index: 99;
+}
+
+.row{
+   display: flex;
+}
+
+
+.seat:nth-of-type(3){
+   margin-right: 50px;
+}
+
+.seat:nth-last-child(4){
+   margin-right: 50px;
+}
+
+.seat:not(.selected) :hover{
+   transform: scale(1.2);
+}
+
+select{
+   background-color: darkred;
+   color: white;
+   width: 300px;
+   height: 30px;
+   font-size: 1rem;
+   border-radius: 10px;
+   text-align: center;
+   outline: white;
+}
+.movies{
+   margin-top: 40px;
+   border-radius: 4%;
+}
+
+.select-info{
+   display: flex;
+   align-items: center;
+   margin-top: -30px;
+   justify-content: space-evenly;
+   background-color: rgb(233, 232, 232);
+   padding: 10px;
+   border-radius: 10px;
+}
+
+.select-info li{
+   display: flex;
+   align-items: center;
+   margin: 0 30px;
+}
+
+.disabled{
+   margin-right: 10px;
+}
+
+.info{
+   margin-top: 30px;
+   color: #292929;
+}
+
+.info span{
+   color: #f79532;
+}
+
+#print{
+   text-align: center;
+   color: red;
+   height: 16px;
+   margin-top: 10px;
+}
+
+.buy{
+   width: 150px;
+   height: 40px;
+   font-size: 1.1rem;
+   padding: 5px 0;
+   margin-top: 20px;
+   border-radius: 8px;
+   border: none;
+   background-color: #2bb3f3;
+   color: white;
+
+}
+
+.btn-close{
+   width: 150px;
+   height: 40px;
+   font-size: 1.1rem;
+   padding: 5px 0;
+   margin-top: 20px;
+   border-radius: 8px;
+   border: none;
+   background-color: #bf0c0c;
+   color: white;
+}
+
+
+.films{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   /* gap: 40px; */
+   column-gap: 30px;
+   row-gap: 40px;
+   max-width: 1440px;
+   margin: 50px auto;
+}
+
+.box {
+   max-width: 360px;
+   width: 100%;
+   border-radius: 8px;
+   background: #fff;
+   color: #666;
+   box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+   overflow: hidden;
+
+}
+
+.box:hover .film-image{
+   transform: scale(1.1);
+   overflow: hidden;
+   
+}
+
+.film-image{
+   overflow: hidden;
+   width: 360px;
+   height: 300px;
+   object-position: 0 0px;
+   border-radius:4px;
+   transition: 1s;
+   
+}
+.film-image img {
+   width: 100%;
+   height: 360px;
+   overflow: hidden;
+}
+
+.film-description {
+   padding: 10px;
+   padding-left: 25px;
+   color: #666;
+}
+.film-name {
+   font-size: 24px;
+   padding-top: 10px;
+}
+.date-ticked {
+   font-size: 24px;
+   padding-top: 10px;
+   font-weight: 800;
+}
+.place-ticked {
+   padding-top: 16px;
+   font-size: 20px;
+}
+.price-ticked {
+   padding-top: 16px;
+   font-size: 24px;
+}
+
+.box-action{
+   display: block;
+   width: 100%;
+   padding: 15px;
+   background-color: #FFDD00;
+   font-size: 1.3rem;
+   color: #292929;
+   border: none;
+   border-radius: 4px;
+   margin-top: 16px;
+   margin-bottom: 8px;
+}
+
+
+.buy-container{
+   background-color: rgba(0, 0, 0, 0.4);   
+   height: 90vh;
+   display: none;
+   padding: 20px 100px;
+   position: absolute;
+   background-color: white;
+   border-radius: 16px;
+   box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+   z-index: 99;
+}
+
+.x-lg{
+   position: absolute;
+   top: 30px;
+   right: 20px;   
+   z-index: 199;
+   height: 40px;
+   width: 40px;
+}
+
+#x-lg{
+   font-size: 1.5rem;
+   color: crimson;
+   width: 25px;
+   height: 25px;
+}
+
+.bi-house{
+   width: 25px;
+   height: 25px;
+   color: #2bb3f3;
+   margin-top: 30px;
+}
+
+.login__main__page{
+   text-align: center; 
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 20px;
+}
+
+.login__main-page{
+   color: #2bb3f3;
+}
+
+.buy-container h1{
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+.buy-container a {
+   text-decoration: none;
+   color: lightblue;
+}
+
+.btn{
+   background-color: lightblue;
+   padding: 15px;
+   font-family: inherit;
+   font-size: 16px;
+   width: 100%;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.btn:focus{
+   outline: 0;
+}
+
+.btn:active{
+   transform: scale(.98);
+}
+
+.text{
+   margin-top: 30px;
+}
+
+.form-control{
+   position: relative;
+   margin: 20px 0 40px;
+   width: 300px;
+   
+}
+
+.form-control input{
+   background-color: transparent;
+   border: none;
+   border-bottom: 2px #292929 solid;
+   display: block;
+   width: 100%;
+   padding: 15px 0;
+   font-size: 18px;
+   color: #292929;
+}
+
+.form-control input:focus, .form-control input:valid{
+   outline: 0;
+   border-bottom-color: lightblue ;
+}
+
+ .form-control label{
+   position: absolute;
+   top: 20px;
+   left: 0;
+ }
+
+ .form-control label span{
+   display: inline-block;
+   font-size: 18px;
+   min-width: 5px;
+   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+
+ .form-control input:focus + label span,
+ .form-control input:valid + label span{
+   color: lightblue;
+   transform: translateY(-30px);
+ }
+
+
+#number::-webkit-outer-spin-button,
+#number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ 
+
+.alert-container{
+   display: none;
+   padding: 20px 100px;
+   position: absolute;
+   background-color: #FFDD00;
+   border-radius: 16px;
+   box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+   z-index: 101;
+}
+
+@media screen and (max-width: 900px) {
+   .films{
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 30px;
+   }
+
+   .container{
+      transform: scale(0.8);
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .films{
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+   }
+
+   .container{
+      transform: scale(0.7);
+   }
+
+   .alert-container{
+      padding: 20px 50px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .film-image img{
+      object-position: -50px 0px;
+      /* transform: scale(0.8); */
+   }
+
+   .container{
+      transform: scale(0.5);
+      margin: 0 30px;
+   }
+
+   .alert-container{
+      padding: 10px 20px;
+   }
+
+   .buy-container{
+      padding: 20px 30px;
+   }
+
+   .x-lg{
+      top: 10px;
+      right: 0px;
+   }
+}
+
+
