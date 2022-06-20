@@ -148,7 +148,7 @@ function btnClick() {
          if(window.screen.availWidth < 600){
             container.style.top = scrollY - 60 + 'px'
          } else{
-            container.style.top = scrollY  + 'px'
+            container.style.top = scrollY  + 30 + 'px'
          }
 
       })
