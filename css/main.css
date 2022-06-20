@@ -26,9 +26,9 @@ body{
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   height: 90vh;
+   /* height: 90vh; */
    display: none;
-   padding: 50px 100px;
+   padding: 10px 100px;
    position: absolute;
    background-color: white;
    /* border: 2px solid saddlebrown; */
@@ -306,7 +306,7 @@ select{
    border-bottom: 2px #292929 solid;
    display: block;
    width: 100%;
-   padding: 15px 0;
+   padding: 5px 0;
    font-size: 18px;
    color: #292929;
 }
@@ -318,7 +318,7 @@ select{
 
  .form-control label{
    position: absolute;
-   top: 20px;
+   top: 10px;
    left: 0;
  }
 
@@ -371,6 +371,7 @@ select{
    }
 
    .container{
+      padding: 40px 20px;
       transform: scale(0.7);
    }
 
@@ -386,25 +387,52 @@ select{
    }
 
    .container{
-      transform: scale(0.5);
-      margin: 0 30px;
-      height: 100vh;
+      transform: scale(0.6);
+      max-width: 600px;
+      /* width: 100%; */
+      padding: 20px 50px;
+      /* margin: 0 30px; */
+      /* height: 100vh; */
    }
+
+   .row,
+   .select-info,
+   .buy,
+   .btn-close{
+      transform: scale(0.8);
+   }
+
+   .buy,
+   .btn-close{
+      margin-top: 5px;
+   }
+
+
 
    .alert-container{
       padding: 10px 20px;
    }
 
    .buy-container{
-      padding: 20px 30px;
+      transform: scale(0.8);
+      padding: 20px 60px;
    }
 
    .x-lg{
-      top: 10px;
+      top: 20px;
       right: 0px;
    }
 
    
+}
+
+@media screen and (max-width: 350px) {
+   
+   .alert-container{
+      transform: scale(0.7);
+   }
+
+
 }
 
 

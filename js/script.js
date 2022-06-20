@@ -139,12 +139,18 @@ function btnClick() {
          buttonValue = e.target.value;
          const filmImage = document.querySelector('.film-image');
 
-         container.style.display = 'flex'
-
+         
          amount.innerHTML = e.target.value * 1000
          calculateTotal()
+         
+         container.style.display = 'flex';
 
-         container.style.top = scrollY + 30 + 'px'
+         if(window.screen.availWidth < 600){
+            container.style.top = scrollY - 60 + 'px'
+         } else{
+            container.style.top = scrollY  + 'px'
+         }
+
       })
    })
 }
@@ -161,12 +167,31 @@ btnClose.addEventListener('click', function () {
 buyButton.addEventListener('click', () => {
    if(selectedSeatsCounter !== 0){
       container.style.display = 'none'
+      buyContainer.style.top = scrollY + 20 + 'px'
       buyContainer.style.display = 'block'
-   } else{
+   } 
+   else if(window.screen.availWidth < 600){
+      alertContainer.style.top = scrollY + 220 + 'px'
+
+      alertContainer.style.display = 'block'
+   }
+
+   else if(window.screen.availWidth < 900){
+      alertContainer.style.top = scrollY + 250 + 'px'
+
+      alertContainer.style.display = 'block'
+   }
+
+   else{
          alertContainer.style.top = scrollY + 280 + 'px'
 
          alertContainer.style.display = 'block'
+         console.log('click else');
    }
+
+   setTimeout(() => {
+      alertContainer.style.display = 'none'
+   }, 1300);
    
 })
 
@@ -197,6 +222,10 @@ goBackBtn.addEventListener('click', () => {
 
 goMainBtn.addEventListener('click', () => {
    buyContainer.style.display = 'none';
+})
+
+window.addEventListener('scroll', () =>{
+   container.style.display = 'none'
 })
 
 
